@@ -44,6 +44,15 @@ class _MainScreenState extends State<MainScreen> {
 
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return Scaffold(
+      body: _screens[_selectedIndex],
+      bottomNavigationBar: BottomNavigationBar(
+        currentIndex: _selectedIndex,
+        onTap: _onItemTapped,
+        items: const <BottomNavigationBar[
+          BottomNavigationBarItem(icon: icon(Icons.home),label: 'Home'),
+        
+          ]),
+    )
   }
 }
